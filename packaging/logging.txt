@@ -1,0 +1,15 @@
+echo off
+
+:: Create Log File
+if not exist "C:\CMA" (
+	mkdir "C:\CMA"
+	if "!errorlevel!" EQU "0" (
+		echo Log Folder created successfully
+	) else (
+		echo Log Error while creating folder
+	)
+) else (
+	echo Log Folder already exists
+)
+
+set LOGFL="C:\CMA\   .log"

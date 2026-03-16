@@ -1,0 +1,29 @@
+To display Intune logs related to Out-of-Box Experience (OOBE) during Windows Autopilot deployments, you can utilize several methods:
+1. Event Viewer:
+Navigate to Event Viewer (eventvwr.exe). 
+Go to "Applications and Services Logs > Microsoft > Windows > ModernDeployment-Diagnostics-Provider > Autopilot" 
+The log entries can provide details about Windows Autopilot profile settings and OOBE flow, says a post on Learn Microsoft. 
+You can also check "Applications and Services Logs > Microsoft > Windows > DeviceManagement-Enterprise-Diagnostics-Provider" for MDM logs, says a post on Learn Microsoft. 
+2. Intune Management Extension Logs:
+Locate Intune logs in the directory: C:\ProgramData\Microsoft\IntuneManagementExtension\Logs. 
+The Intune Management Extension log file (ime.log) can be a starting point for troubleshooting, says a post on Reddit. 
+Tools like CMTrace.exe can be used to view these log files, says a post on Learn Microsoft. 
+3. Autopilot Diagnostics Page: 
+During OOBE on a Windows 11 device, press Ctrl-Shift-D to open the Windows Autopilot Diagnostics Page.
+This page can be used to obtain the hardware hash during OOBE.
+4. Command Prompt During OOBE:
+Access a command prompt window during OOBE by pressing Shift+F10. 
+You can use commands like mdmdiagnosticstool.exe to collect logs, says a post on Learn Microsoft. 
+5. Enrollment Status Page (ESP) Logs: 
+ESP logs can be found in the directory: C:\\ProgramData\\Microsoft\\Windows\\ESP\\Logs.
+6. Intune Admin Center:
+You can view Autopilot deployment status in the Microsoft Intune admin center. 
+Navigate to "Devices > Monitor > Windows Autopilot deployment status". 
+This report provides details on each device deployment, including status, phases, and errors. 
+You can also use the "Collect diagnostics" action on a device to gather logs. 
+Select "Devices > By platform > Windows > select a supported device". 
+On the device's Overview page, select "Collect diagnostics". 
+After the action completes, you can download the collected data. 
+7. Audit Logs: 
+Intune audit logs can be accessed through the Intune admin center.
+Go to "Tenant administration > Audit logs".
