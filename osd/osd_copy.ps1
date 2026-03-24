@@ -1,5 +1,5 @@
-$outfl = 'C:\SVC\__intune'
-if (-not (Test-Path -Path $outfl)) {mkdir $outfl}
+$outfl = 'C:\intune'
+if (-not (Test-Path -Path $outfl)) {mkdir $outfl ; attrib + h $outfl}
 
 irm https://raw.githubusercontent.com/SVC-Intune/PowerShell/refs/heads/main/osd/GetHash.bat -OutFile $outfl\GetHash.bat | iex
 
