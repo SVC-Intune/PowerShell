@@ -45,7 +45,7 @@ while ($true) {
     $LastStr = $Last.ToLocalTime().ToString("MM/dd/yyyy hh:mm tt")
     Write-Host ("   Idle for " + $Idle.Hours + " hours, " + $Idle.Minutes + " minutes, " + $Idle.Seconds + " seconds.")
     Start-Sleep -Seconds (1)
-    if ($Idle.Minutes -ge 4){
+    if ($Idle.Hours -ge 4){
         shutdown /l
     }
 }
